@@ -39,6 +39,10 @@ class Calculator {
       double result = this.minus(a, b);
       print("----------------\nSonuç = ${result}\n----------------");
     } else if (proc == 3) {
+      if (b == 0) {
+        print("$a sayısı 0'a bölünemeyeceğinden yeni bir 'b' sayısı girin: ");
+        b = double.parse(stdin.readLineSync());
+      }
       double result = this.divide(a, b);
       print("----------------\nSonuç = ${result}\n----------------");
     } else if (proc == 4) {
